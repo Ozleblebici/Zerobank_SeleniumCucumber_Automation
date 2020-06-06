@@ -1,4 +1,4 @@
-@purchaseCurrency
+@purchase_currency
 Feature: Purchase Foreign Currency
 
   Background:
