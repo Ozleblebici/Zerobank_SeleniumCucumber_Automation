@@ -80,13 +80,13 @@ public class BasePage {
     }
 
     /**
-     * Method works for the navigate to all module.@
-     * @param moduleName
+     * Method works for the navigate to all tab.@
+     * @param tabName
      */
-    public void navigateToModule(String moduleName){
+    public void navigateToTab(String tabName){
         try{
-            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath("//a[.='"+moduleName+"']")));
-            Driver.get().findElement(By.xpath("//a[.='"+moduleName+"']")).click();
+         //   BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath("//a[.='"+tabName+"']")));
+            Driver.get().findElement(By.xpath("//a[.='"+tabName+"']")).click();
         }catch (Exception e){
             e.printStackTrace();
         }

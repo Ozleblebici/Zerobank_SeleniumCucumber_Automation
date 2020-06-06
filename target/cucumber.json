@@ -3,32 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 3126000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "the user is logged in",
-            "match": {
-              "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-06-06T00:50:30.735Z",
+        "start_timestamp": "2020-06-06T02:58:17.072Z",
         "before": [
           {
             "result": {
-              "duration": 3430000000,
+              "duration": 3432000000,
               "status": "passed"
             },
             "match": {
@@ -36,14 +15,14 @@
             }
           }
         ],
-        "line": 8,
-        "name": "Account types and table columns check",
+        "line": 5,
+        "name": "Account dropdown and table columns check",
         "description": "",
-        "id": "account-summary-all-page-verification;account-types-and-table-columns-check",
+        "id": "account-activity-all-page-verifications;account-dropdown-and-table-columns-check",
         "after": [
           {
             "result": {
-              "duration": 2563000000,
+              "duration": 2560000000,
               "status": "passed"
             },
             "match": {
@@ -56,70 +35,99 @@
         "steps": [
           {
             "result": {
-              "duration": 9000000,
+              "duration": 3096000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "the \"Account Summary\" page should be displayed",
+            "line": 6,
+            "name": "the user is logged in",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Account Summary\"",
-                  "offset": 4
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 79000000,
+              "duration": 723000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "following account types should be displayed",
+            "line": 7,
+            "name": "the user navigate to \"Account Activity\" tab",
             "match": {
-              "location": "com.zerobank.stepdefnitions.AccountSummaryStepDef.following_account_types_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
+              "arguments": [
+                {
+                  "val": "\"Account Activity\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_user_navigate_to_tab(java.lang.String)"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Cash Accounts"
-                ]
-              },
-              {
-                "cells": [
-                  "Investment Accounts"
-                ]
-              },
-              {
-                "cells": [
-                  "Credit Accounts"
-                ]
-              },
-              {
-                "cells": [
-                  "Loan Accounts"
-                ]
-              }
-            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 61000000,
+              "duration": 7000000,
               "status": "passed"
             },
-            "line": 16,
-            "name": "following columns at Credit Accounts table should be displayed",
+            "line": 8,
+            "name": "the \"Account Activity\" page should be displayed",
             "match": {
-              "location": "com.zerobank.stepdefnitions.AccountSummaryStepDef.following_columns_at_table_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
+              "arguments": [
+                {
+                  "val": "\"Account Activity\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 107000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the account drop down default option should be \"Savings\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Savings\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.AccountActivityStepDef.the_drop_down_default_option_should_be(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 134000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "following drop down options should be have",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.AccountActivityStepDef.following_drop_down_options_should_be_have(java.util.List\u003cjava.lang.String\u003e)"
             },
             "rows": [
               {
                 "cells": [
-                  "Account"
+                  "Savings"
+                ]
+              },
+              {
+                "cells": [
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Savings"
+                ]
+              },
+              {
+                "cells": [
+                  "Loan"
                 ]
               },
               {
@@ -129,31 +137,65 @@
               },
               {
                 "cells": [
-                  "Balance"
+                  "Brokerage"
                 ]
               }
             ],
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "following columns name at Transactions table should be have",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.AccountActivityStepDef.following_columns_name_at_Transactions_table_should_be_have(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Date"
+                ]
+              },
+              {
+                "cells": [
+                  "Description"
+                ]
+              },
+              {
+                "cells": [
+                  "Deposit"
+                ]
+              },
+              {
+                "cells": [
+                  "Withdrawal"
+                ]
+              }
+            ],
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@ZB_002"
+            "name": "@ZB_003"
           },
           {
-            "name": "@account_summary"
+            "name": "@account_activity"
           }
         ]
       }
     ],
-    "name": "Account summary all page verification",
+    "name": "Account Activity all page verifications",
     "description": "",
-    "id": "account-summary-all-page-verification",
+    "id": "account-activity-all-page-verifications",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AccountSummary.feature",
+    "uri": "file:src/test/resources/features/AccountActivity.feature",
     "tags": [
       {
-        "name": "@ZB_002",
+        "name": "@ZB_003",
         "type": "Tag",
         "location": {
           "line": 1,
