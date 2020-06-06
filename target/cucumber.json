@@ -1,0 +1,165 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3126000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-06T00:50:30.735Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3430000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Account types and table columns check",
+        "description": "",
+        "id": "account-summary-all-page-verification;account-types-and-table-columns-check",
+        "after": [
+          {
+            "result": {
+              "duration": 2563000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the \"Account Summary\" page should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Summary\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 79000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "following account types should be displayed",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.AccountSummaryStepDef.following_account_types_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Cash Accounts"
+                ]
+              },
+              {
+                "cells": [
+                  "Investment Accounts"
+                ]
+              },
+              {
+                "cells": [
+                  "Credit Accounts"
+                ]
+              },
+              {
+                "cells": [
+                  "Loan Accounts"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "following columns at Credit Accounts table should be displayed",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.AccountSummaryStepDef.following_columns_at_table_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Account"
+                ]
+              },
+              {
+                "cells": [
+                  "Credit Card"
+                ]
+              },
+              {
+                "cells": [
+                  "Balance"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ZB_002"
+          },
+          {
+            "name": "@account_summary"
+          }
+        ]
+      }
+    ],
+    "name": "Account summary all page verification",
+    "description": "",
+    "id": "account-summary-all-page-verification",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AccountSummary.feature",
+    "tags": [
+      {
+        "name": "@ZB_002",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
