@@ -3,27 +3,80 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-06-06T02:58:17.072Z",
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "the user navigate to \"Pay Bills\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pay Bills\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_user_navigate_to_tab(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "the \"Pay Bills\" page should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pay Bills\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-06T20:31:16.832Z",
         "before": [
           {
             "result": {
-              "duration": 3432000000,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "match": {
               "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
             }
           }
         ],
-        "line": 5,
-        "name": "Account dropdown and table columns check",
+        "line": 10,
+        "name": "Successful pay operation",
         "description": "",
-        "id": "account-activity-all-page-verifications;account-dropdown-and-table-columns-check",
+        "id": "pay-bills-all-page-verifications;successful-pay-operation",
         "after": [
           {
             "result": {
-              "duration": 2560000000,
-              "status": "passed"
+              "status": "skipped"
             },
             "match": {
               "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -35,10 +88,55 @@
         "steps": [
           {
             "result": {
-              "duration": 3096000000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 6,
+            "line": 11,
+            "name": "the user completes a Pay operation with these \"100\" and \"2020-09-09\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "message \"The payment was successfully submitted.\" should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The payment was successfully submitted.\"",
+                  "offset": 8
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.AddNewPayeeStepDef.message_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ZB_004"
+          },
+          {
+            "name": "@pay_bills"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
             "name": "the user is logged in",
             "match": {
               "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
@@ -47,15 +145,14 @@
           },
           {
             "result": {
-              "duration": 723000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 7,
-            "name": "the user navigate to \"Account Activity\" tab",
+            "line": 6,
+            "name": "the user navigate to \"Pay Bills\" tab",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Account Activity\"",
+                  "val": "\"Pay Bills\"",
                   "offset": 21
                 }
               ],
@@ -65,141 +162,236 @@
           },
           {
             "result": {
-              "duration": 7000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 8,
-            "name": "the \"Account Activity\" page should be displayed",
+            "line": 7,
+            "name": "the \"Pay Bills\" page should be displayed",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Account Activity\"",
+                  "val": "\"Pay Bills\"",
                   "offset": 4
                 }
               ],
               "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
             },
             "keyword": "When "
-          },
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-06T20:31:16.927Z",
+        "before": [
           {
             "result": {
-              "duration": 107000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 9,
-            "name": "the account drop down default option should be \"Savings\"",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Savings\"",
-                  "offset": 47
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.AccountActivityStepDef.the_drop_down_default_option_should_be(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
+              "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Unsuccessful pay operation with blank data",
+        "description": "",
+        "id": "pay-bills-all-page-verifications;unsuccessful-pay-operation-with-blank-data",
+        "after": [
           {
             "result": {
-              "duration": 134000000,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 10,
-            "name": "following drop down options should be have",
             "match": {
-              "location": "com.zerobank.stepdefnitions.AccountActivityStepDef.following_drop_down_options_should_be_have(java.util.List\u003cjava.lang.String\u003e)"
+              "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Savings"
-                ]
-              },
-              {
-                "cells": [
-                  "Checking"
-                ]
-              },
-              {
-                "cells": [
-                  "Savings"
-                ]
-              },
-              {
-                "cells": [
-                  "Loan"
-                ]
-              },
-              {
-                "cells": [
-                  "Credit Card"
-                ]
-              },
-              {
-                "cells": [
-                  "Brokerage"
-                ]
-              }
-            ],
+            "line": 17,
+            "name": "the user completes a Pay operation with these \"\" and \"2020-09-09\"",
+            "match": {},
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 68000000,
-              "status": "passed"
+              "status": "undefined"
             },
-            "line": 17,
-            "name": "following columns name at Transactions table should be have",
-            "match": {
-              "location": "com.zerobank.stepdefnitions.AccountActivityStepDef.following_columns_name_at_Transactions_table_should_be_have(java.util.List\u003cjava.lang.String\u003e)"
+            "line": 18,
+            "name": "the user completes a Pay operation with these \"1000\" and \"\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
             },
-            "rows": [
-              {
-                "cells": [
-                  "Date"
-                ]
-              },
-              {
-                "cells": [
-                  "Description"
-                ]
-              },
-              {
-                "cells": [
-                  "Deposit"
-                ]
-              },
-              {
-                "cells": [
-                  "Withdrawal"
-                ]
-              }
-            ],
+            "line": 19,
+            "name": "validation message \"Please fill in this field message.\" should be displayed",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@ZB_003"
+            "name": "@ZB_004"
           },
           {
-            "name": "@account_activity"
+            "name": "@pay_bills"
+          },
+          {
+            "name": "@negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "the user navigate to \"Pay Bills\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pay Bills\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_user_navigate_to_tab(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "the \"Pay Bills\" page should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pay Bills\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-06T20:31:16.939Z",
+        "before": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Unsuccessful pay operation with invalid",
+        "description": "",
+        "id": "pay-bills-all-page-verifications;unsuccessful-pay-operation-with-invalid",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 23,
+            "name": "the user completes a Pay operation with these \" abc*/_+\" and \"2020-09-09\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "the user completes a Pay operation with these \"5000\" and \"abcd\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "validation message \"Please fill in this field message.\" should be displayed",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ZB_004"
+          },
+          {
+            "name": "@pay_bills"
+          },
+          {
+            "name": "@negative"
           }
         ]
       }
     ],
-    "name": "Account Activity all page verifications",
+    "name": "Pay Bills all page verifications",
     "description": "",
-    "id": "account-activity-all-page-verifications",
+    "id": "pay-bills-all-page-verifications",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/AccountActivity.feature",
+    "uri": "file:src/test/resources/features/PayBills.feature",
     "tags": [
       {
-        "name": "@ZB_003",
+        "name": "@ZB_004",
         "type": "Tag",
         "location": {
           "line": 1,
           "column": 1
+        }
+      },
+      {
+        "name": "@pay_bills",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 9
         }
       }
     ]

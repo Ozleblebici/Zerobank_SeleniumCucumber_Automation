@@ -1,5 +1,6 @@
 package com.zerobank.stepdefnitions;
 
+import com.zerobank.pages.LoginPage;
 import com.zerobank.utilities.Pages;
 import io.cucumber.java.en.Then;
 
@@ -15,11 +16,13 @@ public class AccountActivityStepDef {
         pages.accountActivity().verifyDropDownDefaultOption(defaultValue);
     }
 
+
     @Then("following drop down options should be have")
     public void following_drop_down_options_should_be_have(List<String> dropDownList) {
 
         pages.accountActivity().verifyDropDownOptions(dropDownList);
     }
+
 
     @Then("following columns name at Transactions table should be have")
     public void following_columns_name_at_Transactions_table_should_be_have(List<String> columnNameList) {

@@ -21,8 +21,8 @@ public class Hooks {
 
     @Before
     public void setUp(){
-//    Actions actions;
-//    WebDriverWait wait;
+        Actions actions;
+        WebDriverWait wait;
         WebDriver driver = Driver.get();
         driver.get(ConfigurationReader.get("url"));
         driver.manage().window().maximize();

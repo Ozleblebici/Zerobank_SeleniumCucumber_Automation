@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class AccountActivity extends BasePage{
+public class AccountActivityPage extends BasePage{
 
     @FindBy (linkText = "Show Transactions")
     public WebElement showTransactionsLink;

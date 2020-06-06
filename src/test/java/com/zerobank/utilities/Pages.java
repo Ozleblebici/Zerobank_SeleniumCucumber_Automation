@@ -1,15 +1,17 @@
 package com.zerobank.utilities;
 
-import com.zerobank.pages.AccountActivity;
-import com.zerobank.pages.AccountSummary;
+import com.zerobank.pages.AccountActivityPage;
+import com.zerobank.pages.AccountSummaryPage;
 import com.zerobank.pages.LoginPage;
+import com.zerobank.pages.PayBillsPage;
 
 public class Pages {
 
 
     private LoginPage loginPage;
-    private AccountSummary accountSummary;
-    private AccountActivity accountActivity;
+    private AccountSummaryPage accountSummaryPage;
+    private AccountActivityPage accountActivityPage;
+    private PayBillsPage payBillsPage;
 
     public LoginPage loginPage(){
         if (loginPage == null) {
@@ -18,17 +20,24 @@ public class Pages {
         return loginPage;
     }
 
-    public AccountSummary accountSummary(){
-        if (accountSummary == null) {
-            accountSummary = new AccountSummary();
+    public AccountSummaryPage accountSummary(){
+        if (accountSummaryPage == null) {
+            accountSummaryPage = new AccountSummaryPage();
         }
-        return accountSummary;
+        return accountSummaryPage;
     }
 
-    public AccountActivity accountActivity() {
-        if (accountActivity == null) {
-            accountActivity = new AccountActivity();
+    public AccountActivityPage accountActivity() {
+        if (accountActivityPage == null) {
+            accountActivityPage = new AccountActivityPage();
         }
-        return accountActivity;
+        return accountActivityPage;
+    }
+
+    public PayBillsPage payBillsPage() {
+        if (payBillsPage == null) {
+            payBillsPage = new PayBillsPage();
+        }
+        return payBillsPage;
     }
 }

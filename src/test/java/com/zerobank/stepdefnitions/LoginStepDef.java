@@ -18,6 +18,8 @@ public class LoginStepDef {
         page.loginPage().loginAs("userName","passWord");
     }
 
+
+    /////  put this asser in page
     @Then("login error message should be displayed")
     public void login_error_message_should_be_displayed() {
         Assert.assertTrue(page.loginPage().errorMessage.isDisplayed());
