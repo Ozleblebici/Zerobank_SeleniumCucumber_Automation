@@ -1,28 +1,29 @@
 package com.zerobank.stepdefnitions;
 
+import com.zerobank.utilities.Pages;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AccountActivityNavStepDef {
 
-
+    Pages pages = new Pages();
 
     @Given("the user accesses the {string}")
     public void the_user_accesses_the(String module) {
-        System.out.println("navigate to page module");
+       pages.accountSummary().navigateToTab(module);
     }
 
     @When("the user clicks on {string} link on the Account Summary page")
     public void the_user_clicks_on_link_on_the_Account_Summary_page(String linkName) {
-        System.out.println(linkName);
+       pages.accountSummary().clickAccountLink(linkName);
     }
 
 
 
     @Then("Account drop down should have {string} selected")
-    public void account_drop_down_should_have_selected(String dropDownName) {
-        System.out.println(dropDownName);
+    public void account_drop_down_should_have_selected(String selectedAccountName) {
+        pages.accountActivity().verifyDefaultSelectAccount(selectedAccountName);
     }
 
 

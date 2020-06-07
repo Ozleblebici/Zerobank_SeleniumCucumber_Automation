@@ -14,4 +14,3 @@ com\zerobank\pages\BasePage.class
 com\zerobank\utilities\Driver.class
 com\zerobank\stepdefnitions\PurchaseForeignCurrencyStepDef.class
 com\zerobank\utilities\Pages.class
-com\zerobank\pages\AccountSummary.class

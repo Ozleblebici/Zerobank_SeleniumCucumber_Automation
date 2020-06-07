@@ -72,4 +72,12 @@ public class AccountSummaryPage extends BasePage {
     }
 
 
+    /**
+     * This method will click given account's link
+     * @param accountName
+     */
+    public void clickAccountLink(String accountName){
+        Driver.get().findElement(By.xpath("//td/a[.='"+accountName+"']")).click();
+    }
+
 }

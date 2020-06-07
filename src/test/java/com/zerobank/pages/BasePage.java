@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class BasePage {
 
     public BasePage(){
@@ -54,8 +56,39 @@ public class BasePage {
     public WebElement logoutLink;
 
 
+    @FindBy (css = ".board-header")
+    public WebElement subTabTitle;
+
+    @FindBy (css = ".board-header")
+    public List<WebElement> subTabTitlesList;
+
+
+
+
+
+
+
+
     /**
-     *  verify to title
+     * This method use subTabTitle and
+     * @return subTab Title texts as sting
+     */
+    public String getSubTabTitleText(){
+        return subTabTitle.getText();
+    }
+
+    /**
+     * This method use subTabTitlesList and
+     * @return list of sub titles texts as a string
+     */
+    public List<String> getSubTabTitlesListTexts(){
+        return BrowserUtils.getElementsText(subTabTitlesList);
+    }
+
+
+    /**
+     * This method verify the page/tab title
+     * @param expectedTitle
      */
 
     public void verifyToTitle(String expectedTitle){

@@ -16,8 +16,8 @@ public class AccountActivityPage extends BasePage{
     @FindBy (linkText = "Find Transactions")
     public WebElement findTransactionsLink;
 
-    @FindBy(xpath = "//div[@id='ui-tabs-1']/h2")
-    public WebElement boardHeaderTitle;
+//    @FindBy(xpath = "//div[@id='ui-tabs-1']/h2")
+//    public WebElement boardHeaderTitle;
 
     @FindBy (id = "aa_accountId")
     public WebElement accuntIdDropdown;
@@ -27,10 +27,10 @@ public class AccountActivityPage extends BasePage{
 
 
 
-
-    public String getBoardHeaderTitle(){
-        return boardHeaderTitle.getText();
-    }
+// base page de genel method var, onu kullan!!
+//    public String getBoardHeaderTitle(){
+//        return boardHeaderTitle.getText();
+//    }
 
     public Select getSelectObject(){
         return new Select(accuntIdDropdown);
@@ -65,6 +65,9 @@ public class AccountActivityPage extends BasePage{
         Assert.assertEquals(columnNameList, getTablesHeadsTexts());
     }
 
+    public void verifyDefaultSelectAccount(String expectedSelectAccountName ){
+        Assert.assertEquals(expectedSelectAccountName,getSelectDefault());
+    }
 
 
 

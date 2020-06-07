@@ -27,7 +27,8 @@ public class LoginStepDef {
     }
 
     @Given("the user should not be able to login with blank credentials")
-    public void the_user_should_not_be_able_to_login_with_blank_credentials() {
+    public void the_user_should_not_be_able_to_login_with_blank_credentials()
+    {
         page.loginPage().loginAs("","");
     }
 }
