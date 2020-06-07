@@ -1,6 +1,7 @@
 package com.zerobank.stepdefnitions;
 
 import com.zerobank.utilities.Pages;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 public class TopPageStepDef {
@@ -11,9 +12,10 @@ public class TopPageStepDef {
         pages.loginPage().verifyToTitle("Zero - "+pageTitleName);
     }
 
-    @Then("the user navigate to {string} tab")
-    public void the_user_navigate_to_tab(String tabName) {
-       pages.accountActivity().navigateToTab(tabName);
+
+    @Given("the user accesses the {string}")
+    public void the_user_accesses_the(String module) {
+        pages.accountSummary().navigateToTab(module);
     }
 
 

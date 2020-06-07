@@ -3,7 +3,7 @@ Feature: Pay Bills all page verifications
 
   Background:
     Given the user is logged in
-    Then the user navigate to "Pay Bills" tab
+    Then the user accesses the "Pay Bills"
     When  the "Pay Bills" page should be displayed
 
   @positive

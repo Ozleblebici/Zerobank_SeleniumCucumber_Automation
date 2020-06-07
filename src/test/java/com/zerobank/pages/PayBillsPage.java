@@ -87,7 +87,10 @@ public class PayBillsPage extends BasePage {
       //  BrowserUtils.waitFor(2);
     // Assert.assertTrue((Boolean)((JavascriptExecutor)Driver.get()).executeScript("return arguments[0].validity.valid;", field));
    //Assert.assertTrue(isRequired);
-
+        // !!!! *********   isDisplay yapılamıyor *********!!!!!!!!!!!!!!!!!!!!!!!
+//        the validation message is actual displayed and visible when the error happens.
+//        Since the default message isn't shown in the page DOM then you won't be able to define a locator for the message itself.
+//        Instead you should opt-in to perform visual validation.
     }
 
 
