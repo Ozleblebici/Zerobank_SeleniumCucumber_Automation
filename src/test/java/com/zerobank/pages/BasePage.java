@@ -2,6 +2,9 @@ package com.zerobank.pages;
 
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
+import io.cucumber.java.bs.A;
+import org.assertj.core.api.Assertions;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -65,6 +68,7 @@ public class BasePage {
 
 
 
+   public SoftAssertions softAssertions;
 
 
 

@@ -1,2 +1,6 @@
 /.idea/
 /Zerobank_SeleniumCucumber_Automation.iml
+/target/maven-archiver/
+/target/maven-status/
+/target/surefire-reports/
+/target/test-classes/

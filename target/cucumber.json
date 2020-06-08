@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3310000000,
+              "duration": 3629000000,
               "status": "passed"
             },
             "line": 5,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 1635000000,
+              "duration": 741000000,
               "status": "passed"
             },
             "line": 6,
@@ -41,7 +41,7 @@
           },
           {
             "result": {
-              "duration": 78000000,
+              "duration": 92000000,
               "status": "passed"
             },
             "line": 7,
@@ -60,11 +60,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-06-07T03:17:21.300Z",
+        "start_timestamp": "2020-06-08T01:04:06.286Z",
         "before": [
           {
             "result": {
-              "duration": 4637000000,
+              "duration": 4954000000,
               "status": "passed"
             },
             "match": {
@@ -72,14 +72,14 @@
             }
           }
         ],
-        "line": 10,
-        "name": "Search date range",
+        "line": 40,
+        "name": "Type",
         "description": "",
-        "id": "find-transactions-in-account-activity;search-date-range",
+        "id": "find-transactions-in-account-activity;type",
         "after": [
           {
             "result": {
-              "duration": 2737000000,
+              "duration": 2669000000,
               "status": "passed"
             },
             "match": {
@@ -92,32 +92,10 @@
         "steps": [
           {
             "result": {
-              "duration": 491000000,
+              "duration": 4105000000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "the user enters date range from \"2012-09-01\" to \"2012-09-06\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-01\"",
-                  "offset": 32
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 48
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 4109000000,
-              "status": "passed"
-            },
-            "line": 12,
+            "line": 41,
             "name": "clicks search",
             "match": {
               "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.clicks_search()"
@@ -126,116 +104,171 @@
           },
           {
             "result": {
-              "duration": 43000000,
+              "duration": 2050000000,
               "status": "passed"
             },
-            "line": 13,
-            "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\" and should be sorted by most recent date",
+            "line": 42,
+            "name": "results table should show \"at least one\" result under \"Deposit\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-01\"",
-                  "offset": 58
+                  "val": "\"at least one\"",
+                  "offset": 26
                 },
                 {
-                  "val": "\"2012-09-06\"",
-                  "offset": 74
+                  "val": "\"Deposit\"",
+                  "offset": 54
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_only_show_transactions_dates_between_to_and_should_be_sorted_by_most_recent_date(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 46000000,
+              "duration": 2048000000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "the user accesses the \"Find Transactions\" tab",
+            "line": 43,
+            "name": "results table should show \"at least one\" result under \"Withdrawal\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Find Transactions\"",
-                  "offset": 22
+                  "val": "\"at least one\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 54
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.the_user_accesses_the_tab(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 308000000,
+              "duration": 139000000,
               "status": "passed"
             },
-            "line": 15,
-            "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
+            "line": 44,
+            "name": "user selects type \"Deposit\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-02\"",
-                  "offset": 32
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 48
+                  "val": "\"Deposit\"",
+                  "offset": 18
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.user_selects_type(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 4085000000,
+              "duration": 2033000000,
               "status": "passed"
             },
-            "line": 16,
-            "name": "clicks search",
-            "match": {
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.clicks_search()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 40000000,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\" and should be sorted by most recent date",
+            "line": 45,
+            "name": "results table should show \"at least one\" result under \"Deposit\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-02\"",
-                  "offset": 58
+                  "val": "\"at least one\"",
+                  "offset": 26
                 },
                 {
-                  "val": "\"2012-09-06\"",
-                  "offset": 74
+                  "val": "\"Deposit\"",
+                  "offset": 54
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_only_show_transactions_dates_between_to_and_should_be_sorted_by_most_recent_date(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
+              "duration": 2031000000,
               "status": "passed"
             },
-            "line": 18,
-            "name": "the results table should only not contain transactions dated \"2012-09-01\"",
+            "line": 46,
+            "name": "results table should show \"no\" result under \"Withdrawal\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"2012-09-01\"",
-                  "offset": 61
+                  "val": "\"no\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 44
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.the_results_table_should_only_not_contain_transactions_dated(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
             },
-            "keyword": "And "
+            "keyword": "But "
+          },
+          {
+            "result": {
+              "duration": 117000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user selects type \"Withdrawal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.user_selects_type(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2019000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "results table should show \"at least one\" result under \"Withdrawal\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"at least one\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Withdrawal\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2019000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "results table should show \"no\" result under \"Deposit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"no\"",
+                  "offset": 26
+                },
+                {
+                  "val": "\"Deposit\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
+            },
+            "keyword": "But "
           }
         ],
         "tags": [

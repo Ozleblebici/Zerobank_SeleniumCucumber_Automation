@@ -1,14 +1,17 @@
 package com.zerobank.pages;
 
 import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Driver;
+import org.assertj.core.api.Assertions;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class AccountActivityPage extends BasePage{
 
@@ -42,7 +45,23 @@ public class AccountActivityPage extends BasePage{
     @FindBy (xpath = "(//tbody)[2]//tr//td[1]")
     public List<WebElement> tableDateRowElementsList;
 
+    @FindBy (xpath = "(//tbody)[2]//tr//td[2]")  //KONTOLL ETTTT!!!
+    public List<WebElement> tableDescriptionRowElementsList;
+
+    @FindBy (id = "aa_type")
+    public WebElement accountTypeDropDown;
+
+    //@FindBy ()
+
     public static ArrayList<List<String>> searchList= new ArrayList<>();
+
+
+
+
+    public List<String> getTableDescriptionRowElementsText(){
+        return BrowserUtils.getElementsText(tableDescriptionRowElementsList);
+    }
+
 
     /**
      * This method verify that results dates row just between fromdate to todate
@@ -89,6 +108,11 @@ public class AccountActivityPage extends BasePage{
         Assert.assertEquals(changedDate, list1.get(0));
     }
 
+    public void enterDescription(String description){
+        descriptionInput.clear();
+        descriptionInput.sendKeys(description);
+    }
+
 
     public void enterDateRange(String fromDate, String toDate){
         fromDateInput.clear();
@@ -98,8 +122,22 @@ public class AccountActivityPage extends BasePage{
 
     }
 
+    // GET METHODS
+
+    /**
+     * Tihs method return Select object for account ID DropDown element
+     * @return
+     */
     public Select getSelectObject(){
         return new Select(accuntIdDropdown);
+    }
+
+    /**
+     * Tihs method return Select object for account Type DropDown element
+     * @return
+     */
+    public Select getTypeDropDownSelectObject(){
+        return new Select(accountTypeDropDown);
     }
 
     public String getSelectDefault(){
@@ -137,6 +175,74 @@ public class AccountActivityPage extends BasePage{
     public void verifyDefaultSelectAccount(String expectedSelectAccountName ){
         Assert.assertEquals(expectedSelectAccountName,getSelectDefault());
     }
+
+
+    /**
+     * This method will check that all rows description is include expected input or not
+     * @param expectedInput
+     */
+    public void verifyTableContainDescriptionTexts (String expectedInput){
+        boolean check= false;
+        for (String input : getTableDescriptionRowElementsText()) {
+              if(!input.contains(expectedInput)){
+                  check=false;
+                  break;
+              } else{
+                  check=true;
+              }
+        }
+        Assert.assertTrue(check);
+        //softAssertions.assertThat(check);
+    }
+
+
+    public void verifyTableNotContainDescriptionTexts (String expectedInput){
+        boolean check= true;
+        for (String input : getTableDescriptionRowElementsText()) {
+            if(input.contains(expectedInput)){
+                check=true;
+                break;
+            } else{
+                check=false;
+            }
+        }
+        Assert.assertFalse(check);
+        //softAssertions.assertThat(check);
+    }
+
+
+    public void verifyAccountTypeResult (String row, String input){
+        BrowserUtils.waitFor(2);
+        boolean flag=true;
+        if (input.contains("at least one")) {
+            flag = true;
+        } else if (input.contains("no")) {
+            flag = false;
+        }
+        List<WebElement> typeTableList=new ArrayList<>();
+        if (row.equalsIgnoreCase("Deposit")){
+            typeTableList=Driver.get().findElements(By.xpath("(//tbody)[2]//tr//td[3]"));
+        } else if (row.equalsIgnoreCase("Withdrawal")){
+            typeTableList=Driver.get().findElements(By.xpath("(//tbody)[2]//tr//td[4]"));
+        }
+
+        boolean check = !flag; //true    flag: false
+        for (String eachRow :BrowserUtils.getElementsText(typeTableList) ) {
+            System.out.println("eachRow = " + eachRow);
+            System.out.println("check = " + check);
+            System.out.println("flag = " + flag);
+             if (!eachRow.equals("")){
+                 check= flag;
+                 break;
+             }
+        }
+
+        Assert.assertTrue("flag"+flag,check);
+
+
+
+    }
+
 
 
 

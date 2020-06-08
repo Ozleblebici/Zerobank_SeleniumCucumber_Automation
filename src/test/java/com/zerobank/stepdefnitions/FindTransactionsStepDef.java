@@ -48,40 +48,38 @@ public class FindTransactionsStepDef {
     }
 
     @When("the user enters description {string}")
-    public void the_user_enters_description(String string) {
-        System.out.println();
+    public void the_user_enters_description(String description) {
+       pages.accountActivity().enterDescription(description);
     }
 
     @Then("results table should only show descriptions containing {string}")
-    public void results_table_should_only_show_descriptions_containing(String string) {
-        System.out.println();
+    public void results_table_should_only_show_descriptions_containing(String input) {
+        pages.accountActivity().verifyTableContainDescriptionTexts(input);
     }
 
     @Then("results table should not show descriptions containing {string}")
-    public void results_table_should_not_show_descriptions_containing(String string) {
-        System.out.println();
+    public void results_table_should_not_show_descriptions_containing(String input) {
+        pages.accountActivity().verifyTableNotContainDescriptionTexts(input);
     }
 
 
-    @Then("results table should show at least one result under {string}")
-    public void results_table_should_show_at_least_one_result_under(String string) {
-        System.out.println();
+    @Then("results table should show {string} result under {string}")
+    public void results_table_should_show_result_under(String input, String row) {
+        pages.accountActivity().verifyAccountTypeResult(row,input);
     }
 
     @When("user selects type {string}")
-    public void user_selects_type(String string) {
-        System.out.println();
+    public void user_selects_type(String accountType) {
+        pages.accountActivity().getTypeDropDownSelectObject().selectByValue(accountType.toUpperCase());
+        pages.accountActivity().findButton.click();
     }
 
-    @Then("results table should show no result under Withdrawal")
-    public void results_table_should_show_no_result_under_Withdrawal() {
-        System.out.println();
-    }
 
-    @Then("results table should show no result under {string}")
-    public void results_table_should_show_no_result_under(String string) {
-        System.out.println();
-    }
+
+//    @Then("results table should show no result under {string}")
+//    public void results_table_should_show_no_result_under(String string) {
+//        System.out.println();
+//    }
 
 
 
