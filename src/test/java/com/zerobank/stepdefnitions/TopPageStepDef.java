@@ -14,8 +14,8 @@ public class TopPageStepDef {
 
 
     @Given("the user accesses the {string}")
-    public void the_user_accesses_the(String module) {
-        pages.accountSummary().navigateToTab(module);
+    public void the_user_accesses_the(String tab) {
+        pages.accountSummary().navigateToTab(tab);
     }
 
 

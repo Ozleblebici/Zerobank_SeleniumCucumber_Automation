@@ -1,19 +1,26 @@
 package com.zerobank.stepdefnitions;
 
+import com.zerobank.utilities.Pages;
 import io.cucumber.java.en.*;
 
 import java.util.Map;
 
 public class AddNewPayeeStepDef {
 
+    Pages pages = new Pages();
 
     @Given("creates new payee using following information")
     public void creates_new_payee_using_following_information(Map<String,String>payeeInfoList) {
-        System.out.println(payeeInfoList);
+        pages.addNewPayeeSubTab().creates_new_payee(payeeInfoList);
     }
     @Then("message {string} should be displayed")
     public void message_should_be_displayed(String message) {
-        System.out.println(message);
+        pages.payBillsPage().verifyAlertSuccessMessage(message);
+    }
+
+    @Then("the user accesses the {string} tab")
+    public void the_user_accesses_the_tab(String subTab) {
+        pages.payBillsPage().navigateToSubTabs(subTab);
     }
 }
 

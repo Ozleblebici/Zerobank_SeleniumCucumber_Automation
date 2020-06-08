@@ -6,6 +6,7 @@ import io.cucumber.java.bs.A;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,7 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class BasePage {
+public abstract class BasePage {
 
     public BasePage(){
         PageFactory.initElements(Driver.get(),this );
@@ -69,6 +70,8 @@ public class BasePage {
 
 
    public SoftAssertions softAssertions;
+
+
 
 
 

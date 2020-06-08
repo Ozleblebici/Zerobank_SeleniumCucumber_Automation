@@ -10,8 +10,8 @@ public class FindTransactionsStepDef {
 
     Pages pages =new Pages();
 
-    @Then("the user accesses the {string} tab")
-    public void the_user_accesses_the_tab(String tab) {
+    @Then("the user accesses the Find Transactions tab")
+    public void the_user_accesses_the_Find_Transactions_tab() {
 
            pages.accountActivity().findTransactionsLink.click();
     }

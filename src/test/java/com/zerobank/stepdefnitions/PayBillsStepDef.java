@@ -9,7 +9,7 @@ public class PayBillsStepDef {
 
     @When("the user completes a Pay operation with these {string} and {string}")
     public void the_user_completes_a_Pay_operation_with_these_and(String amount, String date) {
-       pages.payBillsPage().setPayOperation(amount,date);
+       pages.paySavedPayeeSubTab().setPayOperation(amount,date);
     }
 
     @Then("validation message {string} should be displayed at {string}")

@@ -5,4 +5,5 @@ ZB_003      Account Activity all page verifications
 ZB_004      Pay Bills all page verifications
 ZB_005      Navigating to specific accounts in Accounts Activity
 ZB_006      Find Transactions in Account Activity
-
+ZB_007      Add new payee under pay bills
+ZB_008      Purchase Foreign Currency

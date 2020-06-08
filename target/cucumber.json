@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3629000000,
+              "duration": 3302000000,
               "status": "passed"
             },
             "line": 5,
@@ -23,15 +23,15 @@
           },
           {
             "result": {
-              "duration": 741000000,
+              "duration": 822000000,
               "status": "passed"
             },
             "line": 6,
-            "name": "the user accesses the \"Account Activity\"",
+            "name": "the user accesses the \"Pay Bills\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Account Activity\"",
+                  "val": "\"Pay Bills\"",
                   "offset": 22
                 }
               ],
@@ -41,30 +41,30 @@
           },
           {
             "result": {
-              "duration": 92000000,
+              "duration": 156000000,
               "status": "passed"
             },
             "line": 7,
-            "name": "the user accesses the \"Find Transactions\" tab",
+            "name": "the user accesses the \"Purchase Foreign Currency\" tab",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Find Transactions\"",
+                  "val": "\"Purchase Foreign Currency\"",
                   "offset": 22
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.the_user_accesses_the_tab(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.AddNewPayeeStepDef.the_user_accesses_the_tab(java.lang.String)"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-08T01:04:06.286Z",
+        "start_timestamp": "2020-06-08T03:18:45.280Z",
         "before": [
           {
             "result": {
-              "duration": 4954000000,
+              "duration": 3986000000,
               "status": "passed"
             },
             "match": {
@@ -72,14 +72,14 @@
             }
           }
         ],
-        "line": 40,
-        "name": "Type",
+        "line": 32,
+        "name": "Error message for not entering value",
         "description": "",
-        "id": "find-transactions-in-account-activity;type",
+        "id": "purchase-foreign-currency;error-message-for-not-entering-value",
         "after": [
           {
             "result": {
-              "duration": 2669000000,
+              "duration": 2665000000,
               "status": "passed"
             },
             "match": {
@@ -92,191 +92,35 @@
         "steps": [
           {
             "result": {
-              "duration": 4105000000,
+              "duration": 451000000,
               "status": "passed"
             },
-            "line": 41,
-            "name": "clicks search",
+            "line": 33,
+            "name": "user tries to calculate cost without entering a value",
             "match": {
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.clicks_search()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2050000000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "results table should show \"at least one\" result under \"Deposit\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"at least one\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 54
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2048000000,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "results table should show \"at least one\" result under \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"at least one\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 54
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 139000000,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "user selects type \"Deposit\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.user_selects_type(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.user_tries_to_calculate_cost_without_entering_a_value()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2033000000,
+              "duration": 11000000,
               "status": "passed"
             },
-            "line": 45,
-            "name": "results table should show \"at least one\" result under \"Deposit\"",
+            "line": 34,
+            "name": "error message should be displayed",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"at least one\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 54
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.error_message_should_be_displayed()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2031000000,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "results table should show \"no\" result under \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"no\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 44
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
-            },
-            "keyword": "But "
-          },
-          {
-            "result": {
-              "duration": 117000000,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user selects type \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 18
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.user_selects_type(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2019000000,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "results table should show \"at least one\" result under \"Withdrawal\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"at least one\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"Withdrawal\"",
-                  "offset": 54
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2019000000,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "results table should show \"no\" result under \"Deposit\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"no\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"Deposit\"",
-                  "offset": 44
-                }
-              ],
-              "location": "com.zerobank.stepdefnitions.FindTransactionsStepDef.results_table_should_show_result_under(java.lang.String,java.lang.String)"
-            },
-            "keyword": "But "
           }
         ],
         "tags": [
           {
-            "name": "@ZB_006"
+            "name": "@ZB_008"
           },
           {
-            "name": "@find_transactions"
+            "name": "@purchase_currency"
           },
           {
             "name": "@wip"
@@ -284,14 +128,14 @@
         ]
       }
     ],
-    "name": "Find Transactions in Account Activity",
+    "name": "Purchase Foreign Currency",
     "description": "",
-    "id": "find-transactions-in-account-activity",
+    "id": "purchase-foreign-currency",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/FindTransactions.feature",
+    "uri": "file:src/test/resources/features/PurchaseForeignCurrency.feature",
     "tags": [
       {
-        "name": "@ZB_006",
+        "name": "@ZB_008",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -299,7 +143,7 @@
         }
       },
       {
-        "name": "@find_transactions",
+        "name": "@purchase_currency",
         "type": "Tag",
         "location": {
           "line": 1,

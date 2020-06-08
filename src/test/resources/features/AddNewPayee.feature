@@ -1,4 +1,4 @@
-@addPayee
+@ZB_007 @addPayee
 Feature: Add new payee under pay bills
 
   Background:
