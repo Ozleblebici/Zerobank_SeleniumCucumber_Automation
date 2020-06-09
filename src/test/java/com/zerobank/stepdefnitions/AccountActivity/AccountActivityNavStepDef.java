@@ -1,4 +1,4 @@
-package com.zerobank.stepdefnitions;
+package com.zerobank.stepdefnitions.AccountActivity;
 
 import com.zerobank.utilities.Pages;
 import io.cucumber.java.en.Given;

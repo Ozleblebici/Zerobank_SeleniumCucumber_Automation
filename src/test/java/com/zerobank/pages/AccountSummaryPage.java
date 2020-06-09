@@ -1,6 +1,6 @@
 package com.zerobank.pages;
 
-
+import com.zerobank.utilities.BasePage;
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
 import org.junit.Assert;
@@ -56,22 +56,6 @@ public class AccountSummaryPage extends BasePage {
 
 
 
-
-    //  (//thead/tr[1])[1]    thead
-    //  //td//a[.='Savings']   rowlar stringle
-
-
-    public void verifyAccountTypeListText(List<String> expectedList){
-        Assert.assertEquals(expectedList, BrowserUtils.getElementsText(accountTypesList));
-    }
-
-    public void verifyCreditCardTableColumns (List<String> tableColumnsList){
-        // String table names.....
-        ////h2[.='Cash Accounts'] /following-sibling::div //tr[1])[1]
-        Assert.assertEquals(tableColumnsList, BrowserUtils.getElementsText(creditCardAccounttableHeaderList));
-    }
-
-
     /**
      * This method will click given account's link
      * @param accountName
@@ -79,5 +63,27 @@ public class AccountSummaryPage extends BasePage {
     public void clickAccountLink(String accountName){
         Driver.get().findElement(By.xpath("//td/a[.='"+accountName+"']")).click();
     }
+
+
+    // ****VERIFY METHODS****
+
+    /**
+     * This method verify all based account types on pages with @param
+     * @param expectedList
+     */
+    public void verifyAccountTypeListText(List<String> expectedList){
+        Assert.assertEquals(expectedList, BrowserUtils.getElementsText(accountTypesList));
+    }
+
+    /**
+     * This method verify CreditCard Tables Heardes text with @param
+     * @param tableColumnsList
+     */
+    public void verifyCreditCardTableColumns (List<String> tableColumnsList){
+        // String table names.....
+        ////h2[.='Cash Accounts'] /following-sibling::div //tr[1])[1]
+        Assert.assertEquals(tableColumnsList, BrowserUtils.getElementsText(creditCardAccounttableHeaderList));
+    }
+
 
 }

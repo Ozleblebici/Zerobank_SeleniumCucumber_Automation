@@ -1,17 +1,13 @@
 package com.zerobank.pages;
 
-
-import com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef;
+import com.zerobank.utilities.BasePage;
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
-import com.zerobank.utilities.Driver;
-import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
     @FindBy (id = "user_login")
     public WebElement userNameInput;
@@ -28,18 +24,33 @@ public class LoginPage extends BasePage{
     @FindBy (css = ".alert.alert-error")
     public WebElement errorMessage;
 
+
+    /**
+     * This method use for login the url via using conf.pro. credentials
+     */
     public void login(){
         userNameInput.sendKeys(ConfigurationReader.get("username"));
-        passwordInput.sendKeys(ConfigurationReader.get("password"), Keys.ENTER);
-        BrowserUtils.waitFor(2);
+        passwordInput.sendKeys(ConfigurationReader.get("password")); //, Keys.ENTER
+        singInButton.click();
+        BrowserUtils.waitFor(1);
     }
 
+    /**
+     * This method created for negative login tests
+     * @param username
+     * @param password
+     */
     public void loginAs(String username, String password){
         userNameInput.sendKeys(username);
-        passwordInput.sendKeys(password, Keys.ENTER);
-        BrowserUtils.waitFor(2);
+        passwordInput.sendKeys(password); //, Keys.ENTER
+        singInButton.click();
+        BrowserUtils.waitFor(1);
     }
 
+    /**
+     * This method return error message for unsuccessful login (with invalid credentials)
+     * @return
+     */
     public String getErrorMessage (){
        return errorMessage.getText();
     }

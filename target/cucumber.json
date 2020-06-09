@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "line": 4,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3302000000,
+              "duration": 3453000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "the user is logged in",
             "match": {
               "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
@@ -23,48 +23,48 @@
           },
           {
             "result": {
-              "duration": 822000000,
+              "duration": 744000000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "the user accesses the \"Pay Bills\"",
+            "line": 7,
+            "name": "the user accesses the \"Account Activity\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Pay Bills\"",
+                  "val": "\"Account Activity\"",
                   "offset": 22
                 }
               ],
               "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_user_accesses_the(java.lang.String)"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 156000000,
+              "duration": 8000000,
               "status": "passed"
             },
-            "line": 7,
-            "name": "the user accesses the \"Purchase Foreign Currency\" tab",
+            "line": 8,
+            "name": "the \"Account Activity\" page should be displayed",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Purchase Foreign Currency\"",
-                  "offset": 22
+                  "val": "\"Account Activity\"",
+                  "offset": 4
                 }
               ],
-              "location": "com.zerobank.stepdefnitions.AddNewPayeeStepDef.the_user_accesses_the_tab(java.lang.String)"
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
             },
-            "keyword": "Then "
+            "keyword": "When "
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-08T03:18:45.280Z",
+        "start_timestamp": "2020-06-09T01:47:15.709Z",
         "before": [
           {
             "result": {
-              "duration": 3986000000,
+              "duration": 3355000000,
               "status": "passed"
             },
             "match": {
@@ -72,14 +72,14 @@
             }
           }
         ],
-        "line": 32,
-        "name": "Error message for not entering value",
+        "line": 11,
+        "name": "Account dropdown options check",
         "description": "",
-        "id": "purchase-foreign-currency;error-message-for-not-entering-value",
+        "id": "account-activity-all-page-verifications;account-dropdown-options-check",
         "after": [
           {
             "result": {
-              "duration": 2665000000,
+              "duration": 2553000000,
               "status": "passed"
             },
             "match": {
@@ -92,50 +92,223 @@
         "steps": [
           {
             "result": {
-              "duration": 451000000,
+              "duration": 97000000,
               "status": "passed"
             },
-            "line": 33,
-            "name": "user tries to calculate cost without entering a value",
+            "line": 12,
+            "name": "the account drop down default option should be \"Savings\"",
             "match": {
-              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.user_tries_to_calculate_cost_without_entering_a_value()"
+              "arguments": [
+                {
+                  "val": "\"Savings\"",
+                  "offset": 47
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.AccountActivity.AccountActivityStepDef.the_drop_down_default_option_should_be(java.lang.String)"
             },
-            "keyword": "When "
+            "keyword": "Then "
           },
           {
             "result": {
-              "duration": 11000000,
+              "duration": 129000000,
               "status": "passed"
             },
-            "line": 34,
-            "name": "error message should be displayed",
+            "line": 13,
+            "name": "following drop down options should be have",
             "match": {
-              "location": "com.zerobank.stepdefnitions.PurchaseForeignCurrencyStepDef.error_message_should_be_displayed()"
+              "location": "com.zerobank.stepdefnitions.AccountActivity.AccountActivityStepDef.following_drop_down_options_should_be_have(java.util.List\u003cjava.lang.String\u003e)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "Savings"
+                ]
+              },
+              {
+                "cells": [
+                  "Checking"
+                ]
+              },
+              {
+                "cells": [
+                  "Savings"
+                ]
+              },
+              {
+                "cells": [
+                  "Loan"
+                ]
+              },
+              {
+                "cells": [
+                  "Credit Card"
+                ]
+              },
+              {
+                "cells": [
+                  "Brokerage"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ZB_003"
+          },
+          {
+            "name": "@account_activity"
+          },
+          {
+            "name": "@dropdownCheck"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4235000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 686000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user accesses the \"Account Activity\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Activity\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_user_accesses_the(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the \"Account Activity\" page should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Activity\"",
+                  "offset": 4
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.TopPageStepDef.the_Account_Activity_page_should_be_displayed(java.lang.String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-09T01:47:26.128Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2323000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Account table columns header check",
+        "description": "",
+        "id": "account-activity-all-page-verifications;account-table-columns-header-check",
+        "after": [
+          {
+            "result": {
+              "duration": 2550000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 340000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "following columns name at Transactions table should be have",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.AccountActivity.AccountActivityStepDef.following_columns_name_at_Transactions_table_should_be_have(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Date"
+                ]
+              },
+              {
+                "cells": [
+                  "Description"
+                ]
+              },
+              {
+                "cells": [
+                  "Deposit"
+                ]
+              },
+              {
+                "cells": [
+                  "Withdrawal"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@ZB_008"
+            "name": "@ZB_003"
           },
           {
-            "name": "@purchase_currency"
+            "name": "@account_activity"
           },
           {
-            "name": "@wip"
+            "name": "@headerCheck"
           }
         ]
       }
     ],
-    "name": "Purchase Foreign Currency",
-    "description": "",
-    "id": "purchase-foreign-currency",
+    "name": "Account Activity all page verifications",
+    "description": "         Default option, Account drop down options and Transactions table column names should be followings data",
+    "id": "account-activity-all-page-verifications",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/PurchaseForeignCurrency.feature",
+    "uri": "file:src/test/resources/features/AccountActivity/AccountActivity.feature",
     "tags": [
       {
-        "name": "@ZB_008",
+        "name": "@ZB_003",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -143,11 +316,11 @@
         }
       },
       {
-        "name": "@purchase_currency",
+        "name": "@account_activity",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 9
+          "column": 10
         }
       }
     ]

@@ -1,13 +1,11 @@
 package com.zerobank.pages.PayBills;
 
-import com.zerobank.pages.BasePage;
+import com.zerobank.utilities.BasePage;
 import com.zerobank.utilities.BrowserUtils;
-import com.zerobank.utilities.ConfigurationReader;
 import com.zerobank.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -63,6 +61,9 @@ public class PayBillsPage extends BasePage {
 //        the validation message is actual displayed and visible when the error happens.
 //        Since the default message isn't shown in the page DOM then you won't be able to define a locator for the message itself.
 //        Instead you should opt-in to perform visual validation.
+
+        Assert.assertNotEquals("actual url: "+ Driver.get().getCurrentUrl()  ,"http://zero.webappsecurity.com/bank/pay-bills-saved-payee.html", Driver.get().getCurrentUrl());
+        // Burda BUG var!!! 3. step için
     }
 
 

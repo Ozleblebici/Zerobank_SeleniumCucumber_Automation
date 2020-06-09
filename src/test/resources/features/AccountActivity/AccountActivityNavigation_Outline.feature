@@ -1,7 +1,6 @@
-@ZB_005
+@ZB_005 @navigating_account_activity_outline
 Feature: Navigating to specific accounts in Accounts Activity
 
-  @navigating_account_activity_short
   Scenario Outline: Different types <module_name>  verify to redirect <tab_module> accounts
     Given the user is logged in
     And the user accesses the "<module_name>"

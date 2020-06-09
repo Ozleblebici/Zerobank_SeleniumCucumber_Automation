@@ -1,9 +1,7 @@
-package com.zerobank.pages;
+package com.zerobank.utilities;
 
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
-import io.cucumber.java.bs.A;
-import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
@@ -59,7 +57,6 @@ public abstract class BasePage {
     @FindBy(id = "logout_link")
     public WebElement logoutLink;
 
-
     @FindBy (css = ".board-header")
     public WebElement subTabTitle;
 
@@ -68,14 +65,7 @@ public abstract class BasePage {
 
 
 
-
-   public SoftAssertions softAssertions;
-
-
-
-
-
-
+    // ****GETTER METHODS****
     /**
      * This method use subTabTitle and
      * @return subTab Title texts as sting
@@ -92,25 +82,14 @@ public abstract class BasePage {
         return BrowserUtils.getElementsText(subTabTitlesList);
     }
 
-
     /**
-     * This method verify the page/tab title
-     * @param expectedTitle
-     */
-
-    public void verifyToTitle(String expectedTitle){
-
-        Assert.assertEquals(expectedTitle, Driver.get().getTitle());
-    }
-
-
-    /**
-     * This method is navigate us "Help" section directly.@
+     * This method is navigate us "Help" section directly
      */
     public void clickToHelpLink(){
         action.moveToElement(userNameBtn).click().pause(500).moveToElement(helpLink).click().build().perform();
         //  BrowserUtils.clickWithJS(helpLink);
     }
+
     /**
      *This method will work for "Logout" feature.@
      */
@@ -120,7 +99,7 @@ public abstract class BasePage {
     }
 
     /**
-     * Method works for the navigate to all tab.@
+     * This Method perform navigation for relevant tab for given parameter
      * @param tabName
      */
     public void navigateToTab(String tabName){
@@ -129,7 +108,18 @@ public abstract class BasePage {
             Driver.get().findElement(By.xpath("//a[.='"+tabName+"']")).click();
         }catch (Exception e){
             e.printStackTrace();
+            System.out.println("Check entered input tabName = " + tabName);
         }
+    }
+
+
+    // ****VERIFY METHODS****
+    /**
+     * This method verify the page/tab title
+     * @param expectedTitle
+     */
+    public void verifyToTitle(String expectedTitle){
+        Assert.assertEquals(expectedTitle, Driver.get().getTitle());
     }
 
 }

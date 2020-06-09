@@ -1,6 +1,6 @@
 package com.zerobank.pages.PayBills;
 
-import com.zerobank.pages.BasePage;
+import com.zerobank.utilities.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
