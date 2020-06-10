@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -226,7 +226,7 @@ public class AccountActivityPage extends BasePage {
      * @param row
      * @param input
      */
-    public void verifyAccountTypeResult (String row, @NotNull String input){
+    public void verifyAccountTypeResult (String row,  String input){  //@NotNull
         BrowserUtils.waitFor(2);
         boolean flag=true;
         if (input.contains("at least one")) {
