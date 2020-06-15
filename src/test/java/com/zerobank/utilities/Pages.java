@@ -3,6 +3,7 @@ package com.zerobank.utilities;
 import com.zerobank.pages.AccountActivityPage;
 import com.zerobank.pages.AccountSummaryPage;
 import com.zerobank.pages.LoginPage;
+import com.zerobank.pages.OnlineStatementsPage;
 import com.zerobank.pages.PayBills.AddNewPayeeSubTab;
 import com.zerobank.pages.PayBills.PayBillsPage;
 import com.zerobank.pages.PayBills.PaySavedPayeeSubTab;
@@ -18,7 +19,14 @@ public class Pages {
     private PaySavedPayeeSubTab paySavedPayeeSubTab;
     private AddNewPayeeSubTab addNewPayeeSubTab;
     private PurchaseForeignCurrencySubTab purchaseForeignCurrencySubTab;
+    private OnlineStatementsPage onlineStatementsPage;
 
+    public OnlineStatementsPage onlineStatementsPage(){
+        if (onlineStatementsPage == null) {
+            onlineStatementsPage = new OnlineStatementsPage();
+        }
+        return onlineStatementsPage;
+    }
 
     public LoginPage loginPage(){
         if (loginPage == null) {
