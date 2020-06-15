@@ -42,4 +42,14 @@ public class Hooks {
         BrowserUtils.waitFor(2);
         Driver.closeDriver();
     }
+//
+//    @Before ("@dbKullan")
+//    public void dbSteUp(){
+//        db.init.ds;
+//
+//    }
+//    @After ("@dbKullan")
+//    public void dbTearDown(){
+//        db.kapat;
+//    }
 }

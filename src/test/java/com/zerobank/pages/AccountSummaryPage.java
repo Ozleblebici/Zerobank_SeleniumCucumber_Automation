@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class AccountSummaryPage extends BasePage {
+public class AccountSummaryPage extends BasePage  {
 
     @FindBy(xpath = "//h2")
     public List<WebElement> accountTypesList;
@@ -83,6 +83,8 @@ public class AccountSummaryPage extends BasePage {
         // String table names.....
         ////h2[.='Cash Accounts'] /following-sibling::div //tr[1])[1]
         Assert.assertEquals(tableColumnsList, BrowserUtils.getElementsText(creditCardAccounttableHeaderList));
+
+
     }
 
 

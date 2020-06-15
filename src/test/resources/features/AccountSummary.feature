@@ -1,17 +1,21 @@
 @ZB_002
 Feature: Account summary all page verification
 
-  @account_summary
-  Scenario: Account types and table columns check
+  Background:
     Given the user is logged in
     When the "Account Summary" page should be displayed
+
+  @account_summary_types
+  Scenario: Account types check
     Then following account types should be displayed
       | Cash Accounts       |
       | Investment Accounts |
       | Credit Accounts     |
       | Loan Accounts       |
 
-    And following columns at Credit Accounts table should be displayed
+  @account_summary_table
+  Scenario: Account table columns check
+    Then following columns at Credit Accounts table should be displayed
       | Account     |
       | Credit Card |
       | Balance     |
