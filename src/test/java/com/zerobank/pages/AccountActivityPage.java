@@ -141,7 +141,7 @@ public class AccountActivityPage extends BasePage {
     // ****Verify Metohods****
 
     /**
-     * THis method verify that when we change the search dates, this metod find and check @changed Date
+     * THis method verify that when we change the search dates, this method find and check @changed Date
      * @param changedDate
      */
     public void verifyNotContainTransactionsDated (String changedDate){

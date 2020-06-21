@@ -1,7 +1,7 @@
 @ZB_004 @pay_bills
 Feature: Pay Bills all page verifications
 
-  @negative @outline @wip
+  @negative @outline
   Scenario Outline: Unsuccessful pay operation with <test_type>
     Given the user is logged in
     Then the user accesses the "<module_name>"
