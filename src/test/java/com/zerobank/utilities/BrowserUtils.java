@@ -5,11 +5,14 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 
 public class BrowserUtils {
@@ -115,9 +118,9 @@ public class BrowserUtils {
     public static void waitFor(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
     }
 
     /**
@@ -425,6 +428,25 @@ public class BrowserUtils {
             list.set(i,list.get(i).trim());
         }
         return list;
+    }
+
+    /**
+     * This method for FluentWait
+     * @param webElement
+     * @param timeinsec
+     * @return
+     */
+    public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
+        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.get())
+                .withTimeout(Duration.ofSeconds(timeinsec))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class);
+        WebElement element = wait.until(new Function<WebDriver, WebElement>() {
+            public WebElement apply(WebDriver driver) {
+                return webElement;
+            }
+        });
+        return element;
     }
 
 

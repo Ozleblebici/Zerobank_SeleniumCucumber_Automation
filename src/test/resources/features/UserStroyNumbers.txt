@@ -8,3 +8,4 @@ ZB_006              Find Transactions in Account Activity
 ZB_007              Add new payee under pay bills
 ZB_008              Purchase Foreign Currency
 ZB_009              Online statement visualization
+ZB_010              Check and Control Summary Table under My Money Map

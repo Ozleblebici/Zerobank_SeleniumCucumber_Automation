@@ -12,9 +12,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class Driver {
-    private Driver() {
+import java.util.Arrays;
 
+public class Driver {
+
+    private Driver() {
     }
 
     private static WebDriver driver;
@@ -27,6 +29,13 @@ public class Driver {
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("start-maximized");
+                    options.setExperimentalOption("excludeSwitches",  Arrays.asList("disable-popup-blocking"));
+                    options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+                    options.setExperimentalOption("useAutomationExtension", false);
+                    options.addArguments("--incognito");
+                    driver = new ChromeDriver(options);
                     driver = new ChromeDriver();
                     break;
                 case "chrome-headless":

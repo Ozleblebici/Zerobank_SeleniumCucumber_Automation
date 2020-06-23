@@ -13,7 +13,7 @@ Feature: Account summary all page verification
       | Credit Accounts     |
       | Loan Accounts       |
 
-  @account_summary_table @wip
+  @account_summary_table
   Scenario: Account table columns check
     Then following columns at Credit Accounts table should be displayed
       | Account     |

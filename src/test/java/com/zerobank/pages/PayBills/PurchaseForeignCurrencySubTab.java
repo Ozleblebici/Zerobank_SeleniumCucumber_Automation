@@ -83,7 +83,7 @@ public class PurchaseForeignCurrencySubTab extends BasePage {
 
     /**
      * This method verify that error message is appear on the map or not.
-     * If it is not displayed it will give aletError then
+     * If it is not displayed it will give alertError then
      * tryCatch exception catch it and give false for assertion!!!
      */
     public void verifyCurrencyErrorMessageDisplay(){
