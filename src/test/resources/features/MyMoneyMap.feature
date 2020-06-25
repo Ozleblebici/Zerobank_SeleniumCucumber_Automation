@@ -1,3 +1,4 @@
+@ZB_010 @My_Money_Map
 Feature: Check and Control Summary Table under My Money Map
   Users  compares summary tables under the My Money map page tab
 

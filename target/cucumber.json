@@ -1,28 +1,29 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-06-22T18:18:55.138Z",
+        "start_timestamp": "2020-06-25T19:58:40.853Z",
         "before": [
           {
             "result": {
-              "duration": 2000000,
-              "status": "skipped"
+              "duration": 2942000000,
+              "status": "passed"
             },
             "match": {
               "location": "com.zerobank.stepdefnitions.Hooks.setUp()"
             }
           }
         ],
-        "line": 5,
+        "line": 6,
         "name": "Check the summary schema datas",
         "description": "",
         "id": "check-and-control-summary-table-under-my-money-map;check-the-summary-schema-datas",
         "after": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 2555000000,
+              "status": "passed"
             },
             "match": {
               "location": "com.zerobank.stepdefnitions.Hooks.tearDown(io.cucumber.java.Scenario)"
@@ -34,9 +35,10 @@
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 2155000000,
+              "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "the user is logged in",
             "match": {
               "location": "com.zerobank.stepdefnitions.LoginStepDef.the_user_is_logged_in()"
@@ -45,9 +47,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1138000000,
+              "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "the user accesses the \"My Money Map\" tab",
             "match": {
               "arguments": [
@@ -62,42 +65,87 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1019000000,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "table should displays \"\u003cTotal Inflow\u003e\" \"\u003cTotal Outflow\u003e\" \"\u003cWhat\u0027s Left\u003e\"",
-            "match": {},
+            "line": 9,
+            "name": "table should displays summaryrows",
+            "match": {
+              "location": "com.zerobank.stepdefnitions.MyMoneyMapStepDef.table_should_displays_summaryrows()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
-            },
-            "line": 9,
-            "name": "system should compare infos between \"Total Inflow\" and \"Inflow Total\"",
-            "match": {},
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
+              "duration": 65000000,
+              "status": "passed"
             },
             "line": 10,
-            "name": "system should compare infos between \"Total Outflow\" and \"Outflow Total\"",
-            "match": {},
+            "name": "system should compare infos between \"Total Inflow\" and \"Deposits\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Total Inflow\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"Deposits\"",
+                  "offset": 55
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.MyMoneyMapStepDef.system_should_compare_infos_between_and(java.lang.String,java.lang.String)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 63000000,
+              "status": "passed"
             },
             "line": 11,
+            "name": "system should compare infos between \"Total Outflow\" and \"Spendings\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Total Outflow\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"Spendings\"",
+                  "offset": 56
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.MyMoneyMapStepDef.system_should_compare_infos_between_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.zerobank.stepdefnitions.MyMoneyMapStepDef.verify_amount_is_correct(MyMoneyMapStepDef.java:49)\r\n\tat ✽.verify \"What\u0027s Left\" amount is correct(file:///C:/Users/ASUS/IdeaProjects/Zerobank_SeleniumCucumber_Automation/src/test/resources/features/MyMoneyMap.feature:12)\r\n",
+              "duration": 2000000,
+              "status": "pending"
+            },
+            "line": 12,
             "name": "verify \"What\u0027s Left\" amount is correct",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"What\u0027s Left\"",
+                  "offset": 7
+                }
+              ],
+              "location": "com.zerobank.stepdefnitions.MyMoneyMapStepDef.verify_amount_is_correct(java.lang.String)"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
+          {
+            "name": "@ZB_010"
+          },
+          {
+            "name": "@My_Money_Map"
+          },
           {
             "name": "@wip"
           }
@@ -109,6 +157,23 @@
     "id": "check-and-control-summary-table-under-my-money-map",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/MyMoneyMap.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@ZB_010",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@My_Money_Map",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 9
+        }
+      }
+    ]
   }
 ]

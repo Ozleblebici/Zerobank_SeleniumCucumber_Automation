@@ -20,7 +20,8 @@ public class AddNewPayeeStepDef {
 
     @Then("the user accesses the {string} tab")
     public void the_user_accesses_the_tab(String subTab) {
-        pages.payBillsPage().navigateToSubTabs(subTab);
+    //    pages.payBillsPage().navigateToSubTabs(subTab);
+        pages.loginPage().navigateToTab(subTab);
     }
 }
 
