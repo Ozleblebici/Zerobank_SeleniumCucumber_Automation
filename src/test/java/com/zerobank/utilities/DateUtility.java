@@ -21,7 +21,6 @@ public class DateUtility {
     public void verify_dates_between_to(String fromDate, String toDate, List<String> datesString , String dateFormatinput ){
         SimpleDateFormat dateFormat = new SimpleDateFormat(dateFormatinput);
 
-
         try {
             Date fromD = dateFormat.parse(fromDate);
             Date afterD = dateFormat.parse(toDate);

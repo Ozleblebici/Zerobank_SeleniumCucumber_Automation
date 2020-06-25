@@ -3,6 +3,7 @@ package com.zerobank.pages;
 import com.zerobank.utilities.BasePage;
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
+import io.cucumber.java.bs.A;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 //import org.jetbrains.annotations.NotNull;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class AccountActivityPage extends BasePage {
@@ -261,6 +264,36 @@ public class AccountActivityPage extends BasePage {
     public void verifyDateBetweenFromTo(String expectedFromDate, String expectedToDate){
         Assert.assertTrue(Integer.parseInt(tableDateRowElementsList.get(tableDateRowElementsList.size()-1).getText().replace("-","")) >= Integer.parseInt(expectedFromDate.replace("-","")) );
         Assert.assertTrue(Integer.parseInt(tableDateRowElementsList.get(0).getText().replace("-","")) <= Integer.parseInt(expectedToDate.replace("-","")) );
+    }
+
+    public void verifyDateBetweenFromToViaDateClass(String expectedFromDate, String expectedToDate){
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            Date fromDate = dateFormat.parse(expectedFromDate); // 1 eylül
+            Date toDate = dateFormat.parse(expectedToDate);     // 6 eylül
+            //BrowserUtils.waitFor(1);
+
+            List<String> actualDatesString = BrowserUtils.getElementsText(tableDateRowElementsList);
+
+            List<Date> actualDates = new ArrayList<>();
+            for (String dates : actualDatesString) {
+                actualDates.add(dateFormat.parse(dates));
+            }
+
+            boolean betweenCheck= true;
+            for (Date actualDate : actualDates) {
+                if (actualDate.before(fromDate) || actualDate.after(toDate)){
+                    betweenCheck = false;
+                }
+            }
+            Assert.assertTrue("Date is not between FromDate to ToDate", betweenCheck);
+
+        } catch (ParseException e) {  // PARSE excep den farklı bi exp YAZMA bunun amacı sadece pase format hatasını yakalamak, FAIL ATIYOR DİKKAT!!
+            Assert.fail("Wrong date format, correct format should be: yyyy-MM-dd");
+        }
+
     }
 
 

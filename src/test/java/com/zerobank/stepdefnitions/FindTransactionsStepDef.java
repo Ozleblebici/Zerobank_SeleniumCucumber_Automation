@@ -33,7 +33,8 @@ public class FindTransactionsStepDef {
 
     @Then("results table should only show transactions dates between {string} to {string} and should be sorted by most recent date")
     public void results_table_should_only_show_transactions_dates_between_to_and_should_be_sorted_by_most_recent_date(String fromDate, String toDate) {
-        pages.accountActivity().verifyDateBetweenFromTo(fromDate,toDate);
+     //   pages.accountActivity().verifyDateBetweenFromTo(fromDate,toDate);
+          pages.accountActivity().verifyDateBetweenFromToViaDateClass(fromDate,toDate);
         //Driver.get().navigate().refresh();
     }
 

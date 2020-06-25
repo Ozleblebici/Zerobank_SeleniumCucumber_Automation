@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/zerobank/stepdefnitions",
         dryRun = false,
-        tags = "@ZB_010"
+        tags = "@dateTest"
 )
 public class CukesRunner {
 
