@@ -149,6 +149,7 @@ public class AccountActivityPage extends BasePage {
      */
     public void verifyNotContainTransactionsDated (String changedDate){
 
+    // TODO methodu arama sayısına göre günccelleme
         List<String> list1 = searchList.get(0);
         List<String> list2 = searchList.get(1);
 
@@ -286,6 +287,7 @@ public class AccountActivityPage extends BasePage {
             for (Date actualDate : actualDates) {
                 if (actualDate.before(fromDate) || actualDate.after(toDate)){
                     betweenCheck = false;
+                    break;
                 }
             }
             Assert.assertTrue("Date is not between FromDate to ToDate", betweenCheck);

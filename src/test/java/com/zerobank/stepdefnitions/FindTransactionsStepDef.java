@@ -12,7 +12,6 @@ public class FindTransactionsStepDef {
 
     @Then("the user accesses the Find Transactions tab")
     public void the_user_accesses_the_Find_Transactions_tab() {
-
            pages.accountActivity().findTransactionsLink.click();
     }
 
@@ -20,7 +19,6 @@ public class FindTransactionsStepDef {
     @When("the user enters date range from {string} to {string}")
     public void the_user_enters_date_range_from_to(String fromDate, String toDate) {
         pages.accountActivity().enterDateRange(fromDate,toDate);
-
     }
 
     @When("clicks search")

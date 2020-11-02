@@ -12,8 +12,6 @@ import java.util.List;
 
 public class AccountSummaryPage extends BasePage  {
 
-
-
     @FindBy(xpath = "//h2")
     public List<WebElement> accountTypesList;
 
@@ -55,7 +53,6 @@ public class AccountSummaryPage extends BasePage  {
 
     @FindBy (xpath = "(//thead/tr[1])[4]//th")
     public List<WebElement> loanAccounttableHeaderList;
-
 
 
     /**

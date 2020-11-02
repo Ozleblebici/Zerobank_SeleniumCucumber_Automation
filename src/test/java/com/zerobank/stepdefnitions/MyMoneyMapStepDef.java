@@ -8,6 +8,11 @@ import org.openqa.selenium.WebElement;
 
 public class MyMoneyMapStepDef {
 
+    //TODO File upoad classları ile test EKLE!!
+
+
+
+
     @Given("the user access the {string}")
     public void the_user_access_the(String TabName) {
 
